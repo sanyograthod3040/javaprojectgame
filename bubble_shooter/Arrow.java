@@ -8,27 +8,16 @@ import java.awt.Point;
 
 public class Arrow{
 	
-	/**
-	 * current location of the mouse pointer
-	 */
 	private Point p;
 	
 	private static final int TIP_LENGTH = 20;
 	private static final int LENGTH = 80;
 	
-	/**
-	 * Constructor for the class arrow.
-	 */
+	
 	public Arrow(){
 		p = new Point(Constants.FIELD_SIZE_X/2,0);
 	}
 	
-	/**
-	 * Paints the arrow on the bottom of the screen depending on
-	 * the location of the pointer.
-	 * @param g2d the graphics where the arrow should be drawn
-	 * @param base the location of the frame on the screen
-	 */
     public void paintComponent(Graphics2D g2d, Point base) {
     	g2d.setColor(Color.red);
     	Point mouseLoc = MouseInfo.getPointerInfo().getLocation();
